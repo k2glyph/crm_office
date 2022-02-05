@@ -5,7 +5,17 @@
 										<div class="card-header border-0 pt-5">
 											<h3 class="card-title align-items-start flex-column">
 												<span class="card-label fw-bolder fs-3 mb-1">Lead Tunneling</span>
-												<span class="text-muted mt-1 fw-bold fs-7"> Lead</span>
+                                                <?php
+                                                    $n=0;
+                                                    $m=0;
+                                                ?>
+                                                @foreach ($leads as $lead)
+                                                    <label hidden>{{$n+=1}}</label>
+                                                    @if ($lead['status']['id'] == 6)
+                                                        <label hidden>{{$m+=1}}</label>
+                                                    @endif
+                                                @endforeach
+												<span class="text-muted mt-1 fw-bold fs-7">{{$n}} Lead {{$m}} Spam</span>
 											</h3>
 											<div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover">
 												<a href=/ld class="btn btn-sm btn-light btn-active-primary me-2" title="Click For Detail">

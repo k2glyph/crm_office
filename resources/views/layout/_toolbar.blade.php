@@ -28,9 +28,9 @@
 					</li>
 				</ul>
 			</div> --}}
-			<h5 class="my-auto me-3 fw-normal">23-01-2022 | 08:00</h5>
+			<h5 class="my-auto me-3 fw-normal">{{$day}}</h5>
 			<!--end::Wrapper-->
-			
+
 		</div>
 		<!--end::Action group-->
 	</div>

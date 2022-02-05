@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class WhatsappController extends Controller
 {
@@ -83,14 +84,17 @@ class WhatsappController extends Controller
     }
 
     public function addWhatsapp(){
-        return view ('addWhatsapp');
+        $day = Carbon::now()->isoFormat('D MMMM YYYY');
+        return view ('addWhatsapp', compact('day'));
     }
 
     public function ChatWhatsapp(){
-        return view ('chatWhatsapp');
+        $day = Carbon::now()->isoFormat('D MMMM YYYY');
+        return view ('chatWhatsapp', compact('day'));
     }
 
     public function EntryWhatsapp(){
-        return view ('entryWhatsapp');
+        $day = Carbon::now()->isoFormat('D MMMM YYYY');
+        return view ('entryWhatsapp', compact('day'));
     }
 }

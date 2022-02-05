@@ -1,6 +1,7 @@
 <?php
 
 use GuzzleHttp\Client;
+use Carbon\Carbon;
 use App\Http\Controllers\WhatsappController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $day = Carbon::now()->isoFormat('D MMMM YYYY');
     $client = new Client(); //GuzzleHttp\Client
     $url = "https://api.pwkbackoffice.com/api/leads";
 
@@ -27,7 +29,7 @@ Route::get('/', function () {
     ]);
 
     $leads = json_decode($response->getBody(), true);
-    return view('index')->with('leads', $leads);
+    return view('index', compact('day'))->with('leads', $leads);
 });
 
 // Route::get('/', [HomeController::class, 'index']);
