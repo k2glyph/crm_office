@@ -5,7 +5,7 @@
 										<div class="card-header border-0 pt-5">
 											<h3 class="card-title align-items-start flex-column">
 												<span class="card-label fw-bolder fs-3 mb-1">Lead Tunneling</span>
-												<span class="text-muted mt-1 fw-bold fs-7">1 Lead</span>
+												<span class="text-muted mt-1 fw-bold fs-7"> Lead</span>
 											</h3>
 											<div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover">
 												<a href=/ld class="btn btn-sm btn-light btn-active-primary me-2" title="Click For Detail">
@@ -27,7 +27,7 @@
 														<input class="form-control mt-0" name="date_filter"  id="date_filter" type="date" style="height: 33px;" onkeypress="submit()">
 													</div>
 												</form>
-												
+
 												{{-- <form action="#" method="GET" class="d-flex">
 													<input class="form-control mt-0" name="search" id="searchlead" type="text" placeholder="Search" aria-label="Search" style="height: 33px;">
 													<button class="btn mt-n2" type="submit" style="height: 30px;"><i class="fas fa-search fas-7x"></i></button>
@@ -58,55 +58,68 @@
 													<!--end::Table head-->
 													<!--begin::Table body-->
 													<tbody>
+                                                        <?php
+                                                            $n = 0;
+                                                        ?>
+                                                        @foreach ($leads as $lead)
 														<tr>
 															<td>
 																<div class="d-flex align-items-center justify-content-center">
-																	<h1 class="text-dark fw-normal fs-6">1</h1>
+																	<h1 class="text-dark fw-normal fs-6">{{$n+=1}}</h1>
 																</div>
 															</td>
                                                             <td>
 																<div class="d-flex align-items-center justify-content-center">
-																	<h1 class="text-dark fw-normal fs-6">Ord-1</h1>
+																	<h1 class="text-dark fw-normal fs-6">Ord-{{$lead['id']}}</h1>
 																</div>
 															</td>
 															<td>
 																<div class="d-flex align-items-center justify-content-center">
-																	<h1 class="text-dark fw-normal fs-6">Fzall</h1>
+																	<h1 class="text-dark fw-normal fs-6">{{$lead['advertiser'] ?? ''}}</h1>
 																</div>
 															</td>
 															<td>
 																<div class="d-flex align-items-center justify-content-center">
-																	<h1 class="text-dark fw-normal fs-6">Faizal</h1>
+																	<h1 class="text-dark fw-normal fs-6">{{$lead['operator']['name'] ?? ''}}</h1>
 																</div>
 															</td>
 															<td>
 																<div class="d-flex align-items-center justify-content-center">
-																	<h1 class="text-primary fw-normal fs-6 text-hover-primary">Zall</h1>
+																	<h1 class="text-primary fw-normal fs-6 text-hover-primary">{{$lead['customer']['name']}}</h1>
 																</div>
 															</td>
 															<td>
 																<div class="d-flex align-items-center justify-content-center">
 																	{{--  <h1 class="text-dark fw-normal fs-6">{{$lead->client_wa}}</h1>  --}}
 																	{{--  <a class="text-dark fw-normal fs-6 text-hover-primary" href="https://api.whatsapp.com/send/?phone={{$lead->no_wa}}&text={{ $lead->text }}">{{$lead->no_wa}}</a>  --}}
-																	<a class="text-primary fw-normal fs-6 text-hover-primary" href="#">081245527645</a>
+																	<a class="text-primary fw-normal fs-6 text-hover-primary" href="#">{{$lead['customer']['whatsapp']}}</a>
 																</div>
 															</td>
 															<td>
 																<div class="d-flex align-items-center justify-content-center">
-																	<h1 class="text-dark fw-normal fs-6">Generos</h1>
+																	<h1 class="text-dark fw-normal fs-6">{{$lead['product']['name']}}</h1>
 																</div>
 															</td>
 															<td>
 																<div class="d-flex align-items-center justify-content-center">
-																	<h1 class="text-dark fw-normal fs-6">14-01-2022 00:00</h1>
+																	<h1 class="text-dark fw-normal fs-6">{{$lead['updated_at'] ?? ''}}</h1>
 																</div>
 															</td>
 															<td>
 																<div class="d-flex align-items-center justify-content-center">
-																	<h1 class="text-dark fw-normal fs-6 badge badge-light-success">Closing</h1>
+                                                                    @if ($lead['status']['id'] == 6 || $lead['status']['id'] == 7)
+                                                                        <h1 class="text-dark fw-normal fs-6 badge badge-light-danger">{{$lead['status']['name']}}</h1>
+                                                                    @elseif ($lead['status']['id'] == 3)
+                                                                        <h1 class="text-dark fw-normal fs-6 badge badge-light-primary">{{$lead['status']['name']}}</h1>
+                                                                    @elseif ($lead['status']['id'] == 4)
+                                                                        <h1 class="text-dark fw-normal fs-6 badge badge-light-info">{{$lead['status']['name']}}</h1>
+                                                                    @else
+                                                                        <h1 class="text-dark fw-normal fs-6 badge badge-light-success">{{$lead['status']['name']}}</h1>
+                                                                    @endif
 																</div>
 															</td>
 														</tr>
+                                                        @endforeach
 													</tbody>
 													<!--end::Table body-->
 												</table>
@@ -116,4 +129,4 @@
 										</div>
 									</div>
 									<!--end::Tables Widget 9-->
-								
+
