@@ -24,6 +24,8 @@
 	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 	<!--end::Global Stylesheets Bundle-->
+    <!-- Scripts -->
+    {{-- <script src="{{ asset('app.js') }}" defer></script> --}}
 </head>
 <!--end::Head-->
 <!--begin::Body-->

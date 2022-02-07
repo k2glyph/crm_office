@@ -93,7 +93,7 @@
                             </div>
                             <!--end::Heading-->
                             <div class="text-center">
-                                <img src="assets/media/qrcode.png" width="300" alt="">
+                                <img src="" width="300" alt="QR Code" id="qrcode">
                             </div>
                         </div>
                         <!--end::Wrapper-->
