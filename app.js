@@ -1,9 +1,11 @@
-const { Client } = require('whatsapp-web.js');
+const { Client, MessageMedia } = require('whatsapp-web.js');
 const qrcode = require('qrcode');
 const fs = require('fs');
 const express = require('express');
 const {body, validationResult} = require('express-validator');
 const {phoneNumberFormatter} = require('./helper/formatter');
+const fileupload = require('express-fileupload');
+const axios = require('axios');
 const app = express();
 const server = require('http').Server(app);
 // const socketIO = require('socket.io');
@@ -25,6 +27,9 @@ const con = mysql.createConnection({
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.use(fileupload({
+    debug: true
+}));
 
 const SESSION_FILE_PATH = './whatsapp-session.json';
 let sessionCfg;
@@ -132,6 +137,61 @@ app.post('/send-message', [
     }
 
     client.sendMessage(number, message).then(response => {
+        res.status(200).json({
+            status: true,
+            response: response,
+        });
+    }).catch(err =>{
+        res.status(500).json({
+            status: false,
+            response: err,
+        });
+    });
+});
+
+//Send media
+app.post('/send-media', [
+    body('number').notEmpty(),
+    body('caption').notEmpty(),
+], async (req, res) =>{
+    const errors = validationResult(req).formatWith(({msg}) => {
+        return msg;
+    });
+    if(!errors.isEmpty()){
+        return res.status(422).json({
+            status: false,
+            message: errors.mapped()
+        });
+    }
+    const number = phoneNumberFormatter(req.body.number);
+    const caption = req.body.caption;
+
+    // Send Media with URL
+    const fileUrl = req.body.media;
+    let mimetype;
+    const attachment = await axios.get(fileUrl, {responseType: 'arraybuffer'}).then(response => {
+        mimetype = response.headers['content-type'];
+        return response.data.toString('base64');
+    });
+    const media = new MessageMedia(mimetype, attachment, 'Media');
+
+    // Send Media with Choose File
+    // const file = req.files.media;
+    // const media = new MessageMedia(file.mimetype, file.data.toString('base64'), file.name);
+
+    // Send Media in Path File
+    // const media = MessageMedia.fromFilePath('./public/assets/img/example.jpg');
+
+    const isRegisteredNumber = await checkRegisteredNumber(number);
+
+    if(!isRegisteredNumber){
+        return res.status(422).json({
+            status: false,
+            message: 'The number is not registered'
+        });
+    }
+
+    client.sendMessage(number, media, {caption: caption}).then(response => {
         res.status(200).json({
             status: true,
             response: response,
