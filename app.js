@@ -9,8 +9,9 @@ const axios = require('axios');
 const app = express();
 const server = require('http').Server(app);
 // const socketIO = require('socket.io');
+const port = process.env.PORT || 8000;
 const io = require('socket.io')(server,{cors:{
-    origin:"http://127.0.0.1:8000"
+    origin:port
 }});
 // const io = socketIO(server);
 
@@ -204,6 +205,6 @@ app.post('/send-media', [
     });
 });
 
-server.listen(3000);
+server.listen(port);
 
 // http.listen(3000);
