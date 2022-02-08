@@ -45,7 +45,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js" integrity="sha512-iqRVtNB+t9O+epcgUTIPF+nklypcR23H1yR1NFM9kffn6/iBhZ9bTB6oKLaGMv8JE9UgjcwfBFg/eHC/VMws+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(document).ready(function(){
-            var socket = io();
+            var socket = io(.connect({path: 'addWhatsapp/socket.io'});)
 
             socket.on('message', function(msg){
                 $('.logs').append($('<i>').text(msg));
