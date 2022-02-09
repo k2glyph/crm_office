@@ -57,6 +57,23 @@
 	<script src="assets/js/custom/modals/upgrade-plan.js"></script>
 	<script src="assets/js/custom/intro.js"></script>
 	<!--end::Page Custom Javascript-->
+    <script>
+        // setInterval(ajaxCall, 50000); //300000 MS == 5 minutes
+
+        // function ajaxCall() {
+            $(function(){
+                $.ajax({
+                type: 'GET',
+                url: "https://restfull-whatsapp-api.herokuapp.com/qr-code",
+                dataType: 'json',
+                success: function(data){
+                    console.log(data);
+                }
+                });
+            });
+
+        // }
+    </script>
 	<!--end::Javascript-->
 </body>
 <!--end::Body-->
