@@ -21,15 +21,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $day = Carbon::now()->isoFormat('D MMMM YYYY');
     $client = new Client(); //GuzzleHttp\Client
-    $url = "https://api.pwkbackoffice.com/api/leads";
+    $url = "http://127.0.0.1:8080/api/order";
 
 
     $response = $client->request('GET', $url, [
         'verify'  => false,
     ]);
 
-    $leads = json_decode($response->getBody(), true);
-    return view('index', compact('day'))->with('leads', $leads);
+    $order = json_decode($response->getBody(), true);
+    return view('index', compact('day', 'order'));
 });
 
 // Route::get('/', [HomeController::class, 'index']);
