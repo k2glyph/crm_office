@@ -94,12 +94,13 @@
 											<tr class="text-start text-gray-400 fw-bolder fs-8 text-uppercase gs-0">
                                                 <th class="min-w-50px">No</th>
 												<th class="min-w-100px">Order ID</th>
-												<th class="min-w-125px">Advertiser Name</th>
-												<th class="min-w-125px">Operator Name</th>
-												<th class="min-w-125px">Customer Name</th>
-												<th class="min-w-125px">Customer Number</th>
-												<th class="min-w-125px">Product Name</th>
-												<th class="min-w-125px">Date/Time</th>
+												<th class="min-w-100px">Advertiser Name</th>
+												<th class="min-w-100px">Operator Name</th>
+												<th class="min-w-100px">Customer Name</th>
+												<th class="min-w-100px">Customer Number</th>
+												<th class="min-w-100px">Product Name</th>
+												<th class="min-w-100px">Date/Time</th>
+												<th class="min-w-50px">Action</th>
 											</tr>
 											<!--end::Table row-->
 										</thead>
@@ -150,6 +151,18 @@
 												<td>
 													<div class="d-flex align-items-center">
 														<h1 class="text-dark fw-normal fs-6">{{$order['updated_at']}}</h1>
+													</div>
+												</td>
+                                                <td>
+													<div class="d-flex justify-content-end flex-shrink-0" aria-label="Basic outlined example">
+														<form action="" method="GET">
+															@csrf
+															<div class="btn-toolbar justify-content-between px-2" role="toolbar" aria-label="Toolbar with button groups">
+																<div class="btn-group" role="group" aria-label="First group">
+																	<button type="submit" data-bs-toggle="modal" data-bs-target="#edit-user" title="Click to edit data customer" class="btn btn-primary  btn-icon"><i class="la la-user-edit"></i></button>
+																</div>
+															</div>
+														</form>
 													</div>
 												</td>
 											</tr>
