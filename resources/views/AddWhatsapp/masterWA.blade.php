@@ -35,7 +35,6 @@
 @include('layout/topbar/partials/_activity-drawer')
 
 
-@include('layout/explore/_main')
 
 
 <!--begin::Chat drawer-->
