@@ -133,7 +133,7 @@
 				</div>
 				<!--end::Menu-->
 				<!--begin::Close-->
-				<div class="btn btn-sm btn-icon btn-active-light-primary" id="kt_drawer_chat_close">
+				<div class="btn btn-sm btn-icon btn-active-light-primary " id="kt_drawer_chat_close">
 					<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
 					<span class="svg-icon svg-icon-2">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
