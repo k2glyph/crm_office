@@ -54,7 +54,7 @@
 												</div>
 											</div>
 											<div class="me-2 d-flex flex-row">
-												<input class="form-control mt-0 form-control-solid" name="date_filter"  id="date_filter" type="date" style="height: 33px;" onchange="submit()">
+												<input class="form-control mt-0 form-control-solid" name="date_filter"  id="date_filter" type="date" style="height: 33px; width:180px" onchange="submit()">
 											</div>
 										</form>
 										<!--begin::Search-->
@@ -67,7 +67,7 @@
 												</svg>
 											</span>
 											<!--end::Svg Icon-->
-											<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" style="height: 33px;" placeholder="Search Leads" />
+											<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" style="height: 33px;" placeholder="Search Data" />
 										</div>
 									</div>
 								</div>

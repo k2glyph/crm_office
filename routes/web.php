@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $day = Carbon::now()->isoFormat('D MMMM YYYY');
     $client = new Client(); //GuzzleHttp\Client
-    $url = "http://127.0.0.1:8080/api/order";
+    $url = "http://127.0.0.1:8000/api/order";
 
 
     $response = $client->request('GET', $url, [
