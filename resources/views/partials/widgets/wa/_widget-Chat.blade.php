@@ -1,7 +1,4 @@
-<!--begin::Content-->
-<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-    <!--begin::Container-->
-    <div class="container-xxl" id="kt_content_container">
+
         <!--begin::Layout-->
         <div class="d-flex flex-column flex-lg-row">
             <!--begin::Sidebar-->
@@ -318,7 +315,7 @@
             </div>
             <!--end::Sidebar-->
             <!--begin::Content-->
-            <div class="flex-lg-row-fluid ms-lg-7 ms-xl-10">
+            <div class="flex-lg-row-fluid ms-lg-7 ms-xl-10 me-5">
                 <!--begin::Messenger-->
                 <div class="card" id="kt_chat_messenger">
                     <!--begin::Card header-->
@@ -675,5 +672,3 @@
             </div>
             <!--end::Content-->
         </div>
-    </div>
-</div>
