@@ -13,16 +13,6 @@
 				<span class="menu-title">Dashboard</span>
 			</a>
 		</div>
-		<div class="menu-item py-2">
-			<a class="menu-link menu-center" href="?page=index" data-bs-trigger="hover" data-bs-dismiss="click"
-				data-bs-placement="right">
-				<span class="menu-icon me-0">
-					<i class="las la-archive"></i>
-				</span>
-				<span class="menu-title">Archived</span>
-			</a>
-		</div>
-		
 	</div>
 	<!--end::Menu-->
 </div>
