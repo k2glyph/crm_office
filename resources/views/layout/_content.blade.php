@@ -15,21 +15,18 @@
 		</div>
 	</div>
 	<!--end::Row-->
+	
 	<!--begin::Row-->
 	<div class="row gy-5 g-xl-8">
 		<!--begin::Col-->
-		<div class="col-xl-12">
+		<div class="col-xl-4">
 
 			@include('partials/widgets/mixed/_widget-3')
 
 		</div>
 		<!--end::Col-->
-	</div>
-	<!--end::Row-->
-	<!--begin::Row-->
-	<div class="row gy-5 g-xl-8">
 		<!--begin::Col-->
-		<div class="col-xl-12">
+		<div class="col-xl-8">
 
 			@include('partials/widgets/tables/_widget-DataClosing')
 
