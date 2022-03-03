@@ -4,11 +4,11 @@
 								<!--begin::Header-->
 								<div class="card-header border-0 pt-5">
 									<h3 class="card-title align-items-start flex-column mt-n3">
-										<span class="card-label text-white fw-bolder fs-3 mb-1">Order List</span>
+										<span class="card-label text-white fw-bolder fs-3 mb-1">Data Closing</span>
 									</h3>
-									{{-- <audio controls autoplay hidden>
+									<audio controls autoplay hidden>
 										<source src="assets/notif/notif.mp3" type="audio/mpeg">
-									</audio> --}}
+									</audio>
 									<div class="card-toolbar mt-n3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover">
 										<a href=/ld class="btn btn-sm btn-light btn-active-primary me-2 text-hover-white" title="Click For Detail" style="color: #00509d;">
 											<!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
@@ -29,7 +29,7 @@
 											<div class="modal-dialog">
 												<div class="modal-content">
 
-													<form action="" method="GET">
+													<form action="#" method="GET">
 														<div class="modal-header">
 															<h5 class="modal-title" id="exampleModalLabel">Export To Excel</h5>
 															<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -59,7 +59,6 @@
 												</div>
 											</div>
 										</div>
-										<form action="/" method="GET" class="d-flex">
 											<div class="me-2 d-flex flex-row">
 												<input class="form-control mt-0 form-control-solid" name="date_filter"  id="date_filter" type="date" style="height: 33px;" onchange="submit()">
 											</div>
@@ -92,31 +91,22 @@
 										<thead>
 											<!--begin::Table row-->
 											<tr class="text-start text-gray-400 fw-bolder fs-8 text-uppercase gs-0">
-                                                <th class="min-w-50px">No</th>
-												<th class="min-w-100px">Order ID</th>
-												<th class="min-w-100px">Advertiser Name</th>
-												<th class="min-w-100px">Operator Name</th>
-												<th class="min-w-100px">Customer Name</th>
-												<th class="min-w-100px">Customer Number</th>
-												<th class="min-w-100px">Product Name</th>
-												<th class="min-w-100px">Date/Time</th>
-												<th class="min-w-50px">Action</th>
+												<th class="min-w-75px">Order ID</th>
+												<th class="min-w-125px">Advertiser Name</th>
+												<th class="min-w-150px">Operator Name</th>
+												<th class="">Customer</th>
+												<th class="">Whatsapp</th>
+												<th class="">Product</th>
+												<th class="min-w-150px">Date/Time</th>
+												<th class="text-end">Actions</th>
 											</tr>
 											<!--end::Table row-->
 										</thead>
 										<!--end::Table head-->
 										<!--begin::Table body-->
 										<tbody class="fw-bold text-gray-600">
-                                            <?php
-                                                $n=0;
-                                            ?>
-                                            @foreach ($order as $order)
+											@foreach ($order as $order)
 											<tr>
-                                                <td>
-													<div class="d-flex align-items-center">
-														<h1 class="text-dark fw-normal fs-6">{{$n+=1}}</h1>
-													</div>
-												</td>
 												<td>
 													<div class="d-flex align-items-center">
 														<h1 class="text-dark fw-normal fs-6">Ord-{{$order['order_id']}}</h1>
@@ -166,7 +156,7 @@
 													</div>
 												</td>
 											</tr>
-                                            @endforeach
+											@endforeach
 										</tbody>
 										<!--end::Table body-->
 									</table>
