@@ -4,18 +4,12 @@
 								<!--begin::Header-->
 								<div class="card-header border-0 pt-5">
 									<h3 class="card-title align-items-start flex-column mt-n3">
-										<span class="card-label text-white fw-bolder fs-3 mb-1">Data Closing</span>
+										<span class="card-label text-white fw-bolder fs-3 mb-1 text-dark">Data Closing</span>
 									</h3>
 									<audio controls autoplay hidden>
 										<source src="assets/notif/notif.mp3" type="audio/mpeg">
 									</audio>
 									<div class="card-toolbar mt-n3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover">
-										<a href=/ld class="btn btn-sm btn-light btn-active-primary me-2 text-hover-white" title="Click For Detail" style="color: #00509d;">
-											<!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
-											<span class="svg-icon svg-icon-3">
-												<i class="fas fa-chart-line" style="color: #00509d;"></i>
-											</span>
-											<!--end::Svg Icon-->Detail</a>
 											<!-- Button trigger modal -->
 											<button type="button" class="btn btn-sm btn-light btn-active-primary me-2 text-hover-white" title="Click For Export" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: #00509d;">
 												<!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
@@ -25,40 +19,40 @@
 												<!--end::Svg Icon-->Export</button>
 
 											<!-- Modal -->
-										<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-											<div class="modal-dialog">
-												<div class="modal-content">
+											<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content">
 
-													<form action="#" method="GET">
-														<div class="modal-header">
-															<h5 class="modal-title" id="exampleModalLabel">Export To Excel</h5>
-															<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-														</div>
-														<div class="modal-body">
-															<div class="row align-items-center col-12 pb-5">
-																<div class="col-5">
-																	<input class="form-control mt-0" name="from_date"  id="from_date" type="date" style="height: 33px;">
-																</div>
-																<div class="col-2">
-																	<h3 class= "text-dark fw-bolder fs-6 pt-3">Until</h3>
-																</div>
-																<div class="col-5">
-																	<input class="form-control mt-0" name="to_date"  id="to_date" type="date" style="height: 33px;">
+														<form action="#" method="GET">
+															<div class="modal-header">
+																<h5 class="modal-title" id="exampleModalLabel">Export To Excel</h5>
+																<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+															</div>
+															<div class="modal-body">
+																<div class="row align-items-center col-12 pb-5">
+																	<div class="col-5">
+																		<input class="form-control mt-0" name="from_date"  id="from_date" type="date" style="height: 33px;">
+																	</div>
+																	<div class="col-2">
+																		<h3 class= "text-dark fw-bolder fs-6 pt-3">Until</h3>
+																	</div>
+																	<div class="col-5">
+																		<input class="form-control mt-0" name="to_date"  id="to_date" type="date" style="height: 33px;">
+																	</div>
 																</div>
 															</div>
-														</div>
-														<div class="modal-footer">
-															<button type="submit" class="btn btn-sm btn-primary btn-active-info me-2" title="Click For Export">
-															<!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
-															<span class="svg-icon svg-icon-3">
-																<i class="las la-print" style="font-size: 18px"></i>
-															</span>
-															<!--end::Svg Icon-->Export</button>
-														</div>
-													</form>
+															<div class="modal-footer">
+																<button type="submit" class="btn btn-sm btn-primary btn-active-info me-2" title="Click For Export">
+																<!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
+																<span class="svg-icon svg-icon-3">
+																	<i class="las la-print" style="font-size: 18px"></i>
+																</span>
+																<!--end::Svg Icon-->Export</button>
+															</div>
+														</form>
+													</div>
 												</div>
 											</div>
-										</div>
 											<div class="me-2 d-flex flex-row">
 												<input class="form-control mt-0 form-control-solid" name="date_filter"  id="date_filter" type="date" style="height: 33px;" onchange="submit()">
 											</div>
@@ -75,29 +69,23 @@
 											<!--end::Svg Icon-->
 											<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" style="height: 33px;" placeholder="Search Leads" />
 										</div>
-										<!--end::Search-->
-										{{-- <form action="#" method="GET" class="d-flex">
-											<input class="form-control mt-0" name="search" id="searchlead" type="text" placeholder="Search" aria-label="Search" style="height: 33px;">
-											<button class="btn mt-n2" type="submit" style="height: 30px;"><i class="fas fa-search fas-7x"></i></button>
-										</form> --}}
 									</div>
 								</div>
 								<!--end::Header-->
 								<!--begin::Card body-->
 								<div class="card-body pt-0">
 									<!--begin::Table-->
-									<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
+									<table class="table table-row-dashed table-row-gray-300 align-middle gs-0 gy-4" id="kt_customers_table">
 										<!--begin::Table head-->
 										<thead>
 											<!--begin::Table row-->
-											<tr class="text-start text-gray-400 fw-bolder fs-8 text-uppercase gs-0">
-												<th class="min-w-75px">Order ID</th>
-												<th class="min-w-125px">Advertiser Name</th>
-												<th class="min-w-150px">Operator Name</th>
-												<th class="">Customer</th>
-												<th class="">Whatsapp</th>
-												<th class="">Product</th>
-												<th class="min-w-150px">Date/Time</th>
+											<tr class="fw-bold text-muted">
+												<th class="min-w-100px">Order ID</th>
+												<th class="min-w-150px">Advertiser</th>
+												<th class="min-w-150px">Operator</th>
+												<th class="min-w-150px">Customer</th>
+												<th class="min-w-150px">Whatsapp</th>
+												<th class="min-w-150px">Product</th>
 												<th class="text-end">Actions</th>
 											</tr>
 											<!--end::Table row-->
@@ -136,11 +124,6 @@
 												<td>
 													<div class="d-flex align-items-center">
 														<h1 class="text-dark fw-normal fs-6">{{$order['product_name']}}</h1>
-													</div>
-												</td>
-												<td>
-													<div class="d-flex align-items-center">
-														<h1 class="text-dark fw-normal fs-6">{{$order['updated_at']}}</h1>
 													</div>
 												</td>
                                                 <td>
