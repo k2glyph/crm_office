@@ -9,11 +9,6 @@
 		<!--begin::Wrapper-->
 		<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
 
-			@include('layout/header/_base')
-
-
-			@include('layout/_toolbar')
-
 			<!--begin::Content-->
 			<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 
@@ -21,8 +16,6 @@
 
 			</div>
 			<!--end::Content-->
-
-			@include('layout/_footer')
 
 		</div>
 		<!--end::Wrapper-->
@@ -35,7 +28,9 @@
 @include('layout/topbar/partials/_activity-drawer')
 
 
-@include('layout/explore/_main')
+@include('layout/explore/_list')
+@include('layout/explore/_campaign')
+@include('layout/explore/_bot')
 
 
 <!--begin::Chat drawer-->
