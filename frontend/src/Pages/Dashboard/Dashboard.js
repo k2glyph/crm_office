@@ -6,7 +6,7 @@ import Title from '../../Components/Atoms/Title/Title'
 
 const Dashboard = () => {
   return (
-    <div className='p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 flex flex-col '>
+    <div className='p-6 bg-white rounded-lg border border-gray-200 shadow-md flex flex-col'>
 
         {/* Header Start */}
         <div className='flex flex-row flex-wrap justify-between pb-7'>

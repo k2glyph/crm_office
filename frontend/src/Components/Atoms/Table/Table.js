@@ -10,8 +10,8 @@ function Table({HeadTitle, SubTitle}) {
             </div>
             <button  />
         </div>
-        <table className='w-full text-sm text-left text-gray-500 dark:text-gray-400'>
-            <thead className='text-xs text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
+        <table className='w-full text-sm text-left text-gray-500'>
+            <thead className='text-xs text-gray-700 bg-gray-50'>
                 <tr>
                     <th scope='col' className='px-6 py-3 w-36'>
                         Advertise
@@ -37,17 +37,17 @@ function Table({HeadTitle, SubTitle}) {
                 </tr>
             </thead>
             <tbody>
-                <tr className='bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600'>
+                <tr className='bg-white border-b hover:bg-gray-50'>
                     <td className='px-6 py-4'>
                         Muh Faizal
                     </td>
                     <td className='px-6 py-4'>
                         Customer Service 1
                     </td>
-                    <td scope='row' className='px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap'>
+                    <td scope='row' className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap'>
                         Client 1
                     </td>
-                    <td scope='row' className='px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap'>
+                    <td scope='row' className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap'>
                         +6281245527645
                     </td>
                     <td className='px-6 py-4'>
@@ -62,17 +62,17 @@ function Table({HeadTitle, SubTitle}) {
                         </div>
                     </td>
                 </tr>
-                <tr className='bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600'>
+                <tr className='bg-white border-b hover:bg-gray-50 '>
                     <td className='px-6 py-4'>
                         Muh Faizal
                     </td>
                     <td className='px-6 py-4'>
                         Customer Service 2
                     </td>
-                    <td scope='row' className='px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap'>
+                    <td scope='row' className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap'>
                         Client 2
                     </td>
-                    <td scope='row' className='px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap'>
+                    <td scope='row' className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap'>
                         +6281245527646
                     </td>
                     <td className='px-6 py-4'>
