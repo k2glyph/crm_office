@@ -8,7 +8,10 @@ function Table({HeadTitle, SubTitle}) {
                 <h1 className='font-bold text-xl antialiased'>{HeadTitle}</h1>
                 <span className='text-gray-400 font-semibold'>{SubTitle}</span>
             </div>
-            <button  />
+            <button type='button' className='text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center '>
+            <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'></path></svg>
+                Export
+            </button>
         </div>
         <table className='w-full text-sm text-left text-gray-500'>
             <thead className='text-xs text-gray-700 bg-gray-50'>
