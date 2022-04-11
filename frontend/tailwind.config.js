@@ -1,7 +1,17 @@
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    './public/index.html',
+    "./node_modules/flowbite/**/*.js",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'login-img': "url('./Assets/img/LoginImage.png')",
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
