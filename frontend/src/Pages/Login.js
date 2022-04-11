@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Profile from '../Assets/img/Profile.jpg'
 import Input from '../Components/Partials/Input/Input'
 
@@ -17,8 +18,9 @@ function Login() {
                         <Input height={'mb-5'} title={'Username'} icon={<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>} placeholder={'Username'} type={'email'}/>
                         <Input title={'Username'} icon={<path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z'></path>} placeholder={'Username'} type={'password'}/>
                         <h1 className='self-end p-2 font-semibold text-gray-500 text-sm'>Forget Password?</h1>
+                        <h1 className='self-end p-2 font-semibold text-gray-500 text-sm'>Don’t have an account? </h1>
                         <div className='mt-10'>
-                            <button type='button' className='text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-3 text-center mr-2 mb-2 w-full'>Login</button>
+                            <Link to='/dashboard' type='button' className='text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 text-center mr-2 mb-2 w-full'>Login</Link>
                         </div> 
                     </div>
                 </div>
