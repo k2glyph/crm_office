@@ -18,7 +18,7 @@ function Login() {
                         <Input height={'mb-5'} title={'Username'} icon={<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>} placeholder={'Username'} type={'email'}/>
                         <Input title={'Username'} icon={<path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z'></path>} placeholder={'Username'} type={'password'}/>
                         
-                        <h1 className='self-end p-2 font-semibold text-gray-500 text-sm'>Forget Password?</h1>
+                        <Link to='/' className='self-end p-2 font-semibold text-gray-500 text-sm hover:text-blue-600'>Forget Password?</Link>
                         <h1 className='self-center p-2 mt-5 font-semibold text-gray-500 text-sm'>Don’t have an account? <Link to='/create-account' className='text-blue-600'> Sign Up</Link></h1>
                         <div>
                             <LoginRegitser to={'/dashboard'} title={'Login'} />
