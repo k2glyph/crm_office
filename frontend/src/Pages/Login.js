@@ -7,7 +7,7 @@ function Login() {
     <div className='flex flex-col-reverse md:flex-row'>
         <div className='p-10 md:w-2/5 flex flex-row justify-center items-center'>
             <div className='flex flex-col'>
-                <h1 className='font-bold text-xl text-center pb-10'>
+                <h1 className='font-bold text-xl text-center pb-10 md:pb-20'>
                     Customer Relationship Management
                 </h1>
                 <div>
@@ -22,7 +22,7 @@ function Login() {
                         </div> 
                     </div>
                 </div>
-                <h1 className='font-bold text-gray-500 text-center'>Powered By <span className='text-cyan-500'>POWER<span className='text-black'>KERTO</span></span></h1>
+                <h1 className='font-bold text-gray-500 text-center md:mt-10'>Powered By <span className='text-cyan-500'>POWER<span className='text-black'>KERTO</span></span></h1>
             </div>
         </div>
         <div className='bg-login-img h-96 bg-cover md:w-3/5 md:h-screen '>
