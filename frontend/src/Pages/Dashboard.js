@@ -12,7 +12,7 @@ function Dashboard() {
         <div className='p-10'>
             <div className='flex flex-row justify-between items-center'>
                 <AddWhatsapp />
-                <label className='font-semibold  sm:text-sm md:text-xl'>1 Whatsapp
+                <label className='font-semibold sm:text-sm md:text-xl border border-cyan-300 p-2 rounded-lg'>4 Whatsapp
                     <span className='text-cyan-500'>
                          &nbsp;Registered
                     </span>
