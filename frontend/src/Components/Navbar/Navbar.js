@@ -1,60 +1,154 @@
-import React from 'react';
+import { Fragment } from 'react'
+import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Profile from '../../Assets/img/Profile.jpg';
+import { Link } from 'react-router-dom';
 
-function Navbar() {
-  return (
-    <nav className='bg-white border-gray-200 border shadow-sm px-2 sm:px-4 py-2.5 rounded'>
-        <div className='container flex flex-wrap justify-between items-center mx-auto'>
-            <a href='#' className='flex items-center'>
-                <span className='self-center text-xl font-semibold whitespace-nowrap'>CRM</span>
-            </a>
-            <div className='flex items-center md:order-2'>
-                <button type='button' className='flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300' id='user-menu-button' aria-expanded='false' data-dropdown-toggle='dropdown'>
-                    <span className='sr-only'>Open user menu</span>
-                    <img className='w-8 h-8 rounded-full' src={Profile} alt='user photo'/>
-                </button>
-                <div className='hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow' id='dropdown'>
-                    <div className='py-3 px-4'>
-                        <span className='block text-sm text-gray-900'>Zall</span>
-                        <span className='block text-sm font-medium text-gray-500 truncate'>zall@zall.com</span>
-                    </div>
-                    <ul className='py-1' aria-labelledby='dropdown'>
-                        <li>
-                            <a href='#' className='block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100'>Dashboard</a>
-                        </li>
-                        <li>
-                            <a href='#' className='block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100'>Settings</a>
-                        </li>
-                        <li>
-                            <a href='#' className='block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100'>Earnings</a>
-                        </li>
-                        <li>
-                            <a href='#' className='block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100'>Sign out</a>
-                        </li>
-                    </ul>
-                </div>
-                <button data-collapse-toggle='mobile-menu-2' type='button' className='inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200' aria-controls='mobile-menu-2' aria-expanded='false'>
-                    <span className='sr-only'>Open main menu</span>
-                    <svg className='w-6 h-6' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path fillRule='evenodd' d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z' clipRule='evenodd'></path></svg>
-                    <svg className='hidden w-6 h-6' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path fillRule='evenodd' d='M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z' clipRule='evenodd'></path></svg>
-                </button>
-            </div>
-            <div className='hidden justify-between items-center w-full md:flex md:w-auto md:order-1' id='mobile-menu-2'>
-                <ul className='flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium'>
-                    <li>
-                        <a href='#' className='block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0' aria-current='page'>Dashboard</a>
-                    </li>
-                    <li>
-                        <a href='#' className='block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0'>Customer Service</a>
-                    </li>
-                    <li>
-                        <a href='#' className='block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0'>Reporting</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-  )
+const user = {
+  name: 'Tom Cook',
+  email: 'tom@example.com',
+}
+const navigation = [
+  { name: 'Dashboard', to: '#', current: true },
+  { name: 'Customer Sevice', to: '#', current: false },
+  { name: 'Reporting', to: '#', current: false },
+]
+const userNavigation = [
+  { name: 'Your Profile', to: '#' },
+  { name: 'Settings', to: '#' },
+  { name: 'Sign out', to: '#' },
+]
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
 }
 
-export default Navbar
+export default function Navbar() {
+    return (
+        <>
+        <div className="min-h-full">
+            <Disclosure as="nav" className="border shadow-md">
+            {({ open }) => (
+                <>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex items-center justify-between h-16">
+                        <div className="flex items-center">
+                            <div className="flex-shrink-0">
+                                <img
+                                    className="h-8 w-8"
+                                    src={Profile}
+                                    alt="Workflow"
+                                />
+                            </div>
+                            <div className="hidden md:block">
+                                <div className="ml-10 flex items-baseline space-x-4">
+                                    {navigation.map((item) => (
+                                        <Link
+                                            key={item.name}
+                                            to={item.to}
+                                            className={classNames(
+                                            item.current
+                                                ? 'bg-gray-900 text-white'
+                                                : 'text-gray-900 hover:bg-gray-700 hover:text-white',
+                                            'px-3 py-2 rounded-md text-sm font-medium'
+                                            )}
+                                            aria-current={item.current ? 'page' : undefined}
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="hidden md:block">
+                            <div className="ml-4 flex items-center md:ml-6">
+                                {/* Profile dropdown */}
+                                <Menu as="div" className="ml-3 relative">
+                                    <div>
+                                        <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                                            <span className="sr-only">Open user menu</span>
+                                            <img className="h-8 w-8 rounded-full" src={Profile} alt="" />
+                                        </Menu.Button>
+                                    </div>
+                                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                        {userNavigation.map((item) => (
+                                            <Menu.Item key={item.name}>
+                                                {({ active }) => (
+                                                    <Link
+                                                        to={item.to}
+                                                        className={classNames(
+                                                        active ? 'bg-gray-100' : '',
+                                                        'block px-4 py-2 text-sm text-gray-700'
+                                                        )}
+                                                    >
+                                                        {item.name}
+                                                    </Link>
+                                                )}
+                                            </Menu.Item>
+                                        ))}
+                                    </Menu.Items>
+                                </Menu>
+                            </div>
+                        </div>
+                        <div className="-mr-2 flex md:hidden">
+                            {/* Mobile menu button */}
+                            <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                                <span className="sr-only">Open main menu</span>
+                                {open ? (
+                                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                                ) : (
+                                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                                )}
+                            </Disclosure.Button>
+                        </div>
+                    </div>
+                </div>
+
+                <Disclosure.Panel className="md:hidden">
+                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        {navigation.map((item) => (
+                            <Disclosure.Button
+                                key={item.name}
+                                as="a"
+                                href={item.href}
+                                className={classNames(
+                                    item.current ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white',
+                                    'block px-3 py-2 rounded-md text-base font-medium'
+                                )}
+                                aria-current={item.current ? 'page' : undefined}
+                                >
+                                {item.name}
+                            </Disclosure.Button>
+                        ))}
+                    </div>
+                    <div className="pt-4 pb-3 border-t border-gray-700">
+                        <div className="flex items-center px-5">
+                            <div className="flex-shrink-0">
+                                <img className="h-10 w-10 rounded-full" src={Profile} alt="" />
+                            </div>
+                            <div className="ml-3">
+                                <div className="text-base font-medium leading-none text-white">{user.name}</div>
+                                <div className="text-sm font-medium leading-none text-gray-900">{user.email}</div>
+                            </div>
+                        </div>
+                        <div className="mt-3 px-2 space-y-1">
+                            {userNavigation.map((item) => (
+                            <Disclosure.Button
+                                key={item.name}
+                                as="a"
+                                to={item.to}
+                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-white hover:bg-gray-700"
+                            >
+                                {item.name}
+                            </Disclosure.Button>
+                            ))}
+                        </div>
+                    </div>
+                </Disclosure.Panel>
+                </>
+            )}
+            </Disclosure>
+        </div>
+        </>
+    )
+}
