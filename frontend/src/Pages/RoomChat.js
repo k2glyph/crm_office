@@ -37,10 +37,9 @@ function RoomChat() {
                 <ListChat ContactName={'Muh Faizal'} PhoneNumber={'+6281245527645'} Times={'2 Hours'}/>
                 <ListChat ContactName={'Muh Faizal'} PhoneNumber={'+6281245527645'} Times={'2 Hours'}/>
                 <ListChat ContactName={'Muh Faizal'} PhoneNumber={'+6281245527645'} Times={'2 Hours'}/>
-
             </div>
         </div>
-        <div className='hidden md:flex flex-col md:w-4/6 '>
+        <div className='hidden h-screen md:flex flex-col w-4/6 '>
             <div className='px-5 h-1/6 border-b flex flex-row items-center'>
                 <img src={Profile} className='w-10 h-10 rounded-full'/>
                 <div className='ml-3'>
@@ -51,10 +50,49 @@ function RoomChat() {
                     </div>
                 </div>
             </div>
-            <div className='border-b h-3/4'>
-
+            <div className='overflow-y-auto border-b h-3/4 p-5'>
+                <div className='flex flex-col w-auto mt-2'>
+                    <div className='flex flex-row items-center w-auto'> 
+                        <img src={Profile} className='w-12 h-12 rounded-lg' />
+                        <h1 className='font-bold text-md px-2'>Muhammad Faizal</h1>
+                        <h3 className='font-semibold text-sm text-gray-600'>5 mins</h3>
+                    </div>
+                    <div className='h-auto w-1/2 bg-gray-200 rounded-lg p-3 mt-2'> 
+                        <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.</label>
+                    </div>
+                </div>
+                <div className='flex flex-col items-end w-auto mt-2'>
+                    <div className='flex flex-row items-center w-auto'> 
+                        <h3 className='font-semibold text-sm text-gray-600'>5 mins</h3>
+                        <h1 className='font-bold text-md px-2'>You</h1>
+                        <img src={Profile} className='w-12 h-12 rounded-lg' />
+                    </div>
+                    <div className='h-auto w-1/2 bg-green-400 rounded-lg p-3 mt-2'> 
+                        <label className='text-white'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.</label>
+                    </div>
+                </div>
+                <div className='flex flex-col w-auto mt-2'>
+                    <div className='flex flex-row items-center w-auto'> 
+                        <img src={Profile} className='w-12 h-12 rounded-lg' />
+                        <h1 className='font-bold text-md px-2'>Muhammad Faizal</h1>
+                        <h3 className='font-semibold text-sm text-gray-600'>5 mins</h3>
+                    </div>
+                    <div className='h-auto w-1/2 bg-gray-200 rounded-lg p-3 mt-2'> 
+                        <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.</label>
+                    </div>
+                </div>
+                <div className='flex flex-col items-end w-auto mt-2'>
+                    <div className='flex flex-row items-center w-auto'> 
+                        <h3 className='font-semibold text-sm text-gray-600'>5 mins</h3>
+                        <h1 className='font-bold text-md px-2'>You</h1>
+                        <img src={Profile} className='w-12 h-12 rounded-lg' />
+                    </div>
+                    <div className='h-auto w-1/2 bg-green-400 rounded-lg p-3 mt-2'> 
+                        <label className='text-white'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,.</label>
+                    </div>
+                </div>
             </div>
-            <div className='h-1/6 p-5'>
+            <div className='h-12 p-5'>
                 <div className='h-4/5 mt-1.5 flex flex-row justify-between items-center'>
                     <div className='flex flex-row'>
                         <div className='group border border-gray-600 hover:border-blue-600 rounded-full w-10 h-10 flex justify-center items-center'>
@@ -65,13 +103,12 @@ function RoomChat() {
                         </div>
                     </div>
                     <div className='w-full pl-5 pr-4'>
-                        <input type='text' className='h-10 w-full rounded-full' />
+                        <input type='text' className='h-10 w-full rounded-full shadow-md' placeholder='Send Message...' />
                     </div>
                     <div>
                         <div className='group border border-gray-600 hover:border-blue-600 rounded-full w-10 h-10 flex justify-center items-center ml-2'>
                             <svg className="w-6 h-6 text-gray-900 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
                         </div>
-                        
                     </div>
                 </div>
             </div>
