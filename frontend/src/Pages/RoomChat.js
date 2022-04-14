@@ -1,12 +1,13 @@
 import React from 'react'
 import Profile from '../Assets/img/Profile.jpg'
+import ListChat from '../Components/Partials/ListChat/ListChat'
 import Template from '../Components/Partials/Panel/Template'
 
 function RoomChat() {
   return (
     <div className='flex flex-col md:flex-row'>
         <div className='md:w-2/6 h-screen border-r shadow-md'>
-            <div className='px-5 h-24 md:h-1/6 flex justify-between items-center border-b'>
+            <div className='px-5 h-1/6 flex justify-between items-center border-b'>
                 <div className="relative mt-1">
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                         <svg className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path></svg>
@@ -27,12 +28,26 @@ function RoomChat() {
                     </div>
                 </div>
             </div>
+            <div className='overflow-y-auto h-5/6 px-5 py-5'>
+                <ListChat ContactName={'Muh Faizal'} PhoneNumber={'+6281245527645'} Times={'2 Hours'}/>
+                <ListChat ContactName={'Muh Faizal'} PhoneNumber={'+6281245527645'} Times={'2 Hours'}/>
+                <ListChat ContactName={'Muh Faizal'} PhoneNumber={'+6281245527645'} Times={'2 Hours'}/>
+                <ListChat ContactName={'Muh Faizal'} PhoneNumber={'+6281245527645'} Times={'2 Hours'}/>
+                <ListChat ContactName={'Muh Faizal'} PhoneNumber={'+6281245527645'} Times={'2 Hours'}/>
+                <ListChat ContactName={'Muh Faizal'} PhoneNumber={'+6281245527645'} Times={'2 Hours'}/>
+                <ListChat ContactName={'Muh Faizal'} PhoneNumber={'+6281245527645'} Times={'2 Hours'}/>
+
+            </div>
         </div>
         <div className='hidden md:flex flex-col md:w-4/6 '>
             <div className='px-5 h-1/6 border-b flex flex-row items-center'>
                 <img src={Profile} className='w-10 h-10 rounded-full'/>
                 <div className='ml-3'>
-                    <h1 className='font-semibold'>Muh. Faizal</h1>
+                    <h1 className='font-bold'>Muh. Faizal</h1>
+                    <div className='flex items-center'>
+                        <div className='bg-green-400 w-2 h-2 rounded-full' />
+                        <h1 className='font-semibold ml-1'>Active</h1>
+                    </div>
                 </div>
             </div>
             <div className='border-b h-3/4'>

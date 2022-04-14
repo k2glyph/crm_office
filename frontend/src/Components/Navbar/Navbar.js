@@ -27,7 +27,7 @@ export default function Navbar() {
     return (
         <>
         <div className="min-h-full">
-            <Disclosure as="nav" className="border shadow-md">
+            <Disclosure as="nav" className="border bg-white shadow-md">
             {({ open }) => (
                 <>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

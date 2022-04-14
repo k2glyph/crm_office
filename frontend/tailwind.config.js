@@ -9,7 +9,8 @@ module.exports = {
       backgroundImage: {
         'login-img': "url('./Assets/img/LoginImage.png')",
         'register-img': "url('./Assets/img/RegisterImage.png')",
-      }
+      },
+      
     },
   },
   plugins: [

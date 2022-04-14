@@ -9,16 +9,8 @@ function Dashboard() {
   return (
     <div>
         <Navbar />
-        <div className='p-10'>
-            <div className='flex flex-row justify-between items-center'>
-                <AddWhatsapp />
-                <label className='font-semibold sm:text-sm md:text-xl border border-cyan-300 p-2 rounded-lg'>4 Whatsapp
-                    <span className='text-cyan-500'>
-                         &nbsp;Registered
-                    </span>
-                </label>
-            </div>
-            <div className='py-10 flex justify-between items-center flex-wrap'>
+        <div className='px-10 py-5 border'>
+            <div className='pb-10 flex justify-between items-center flex-wrap'>
                 <CardWhatsapp names={'Zall'} phone={'+6281245527645'}/>
                 <CardWhatsapp names={'Zall'} phone={'+6281245527645'}/>
                 <CardWhatsapp names={'Zall'} phone={'+6281245527645'}/>
