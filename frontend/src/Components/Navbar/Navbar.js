@@ -9,9 +9,9 @@ const user = {
   email: 'tom@example.com',
 }
 const navigation = [
-  { name: 'Dashboard', to: '#', current: true },
+  { name: 'Dashboard', to: '/dashboard', current: false },
+  { name: 'Reporting', to: '/reporting', current: false },
   { name: 'Customer Sevice', to: '#', current: false },
-  { name: 'Reporting', to: '#', current: false },
 ]
 const userNavigation = [
   { name: 'Your Profile', to: '#' },

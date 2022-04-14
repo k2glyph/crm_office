@@ -5,6 +5,7 @@ import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import RoomChat from "./Pages/RoomChat";
+import Reporting from "./Pages/Reporting";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />}/>
         <Route path="/create-account" element={<Register />}/>
         <Route path="/crm-chat" element={<RoomChat />}/>
+        <Route path="/reporting" element={<Reporting />}/>
       </Routes>
     </div>
   );
