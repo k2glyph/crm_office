@@ -1,6 +1,7 @@
+import { Textarea } from 'flowbite-react'
 import React from 'react'
 import Profile from '../Assets/img/Profile.jpg'
-import ListChat from '../Components/Partials/ListChat/ListChat'
+import ListChat from '../Components/Partials/Chat/ListChat'
 import Template from '../Components/Partials/Panel/Template'
 
 function RoomChat() {
@@ -53,8 +54,26 @@ function RoomChat() {
             <div className='border-b h-3/4'>
 
             </div>
-            <div className=''>
-
+            <div className='h-1/6 p-5'>
+                <div className='h-4/5 mt-1.5 flex flex-row justify-between items-center'>
+                    <div className='flex flex-row'>
+                        <div className='group border border-gray-600 hover:border-blue-600 rounded-full w-10 h-10 flex justify-center items-center'>
+                            <svg className="w-6 h-6 text-gray-900 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path></svg>
+                        </div>
+                        <div className='group border border-gray-600 hover:border-blue-600 rounded-full w-10 h-10 flex justify-center items-center ml-2'>
+                            <svg className="w-6 h-6 text-gray-900 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                        </div>
+                    </div>
+                    <div className='w-full pl-5 pr-4'>
+                        <input type='text' className='h-10 w-full rounded-full' />
+                    </div>
+                    <div>
+                        <div className='group border border-gray-600 hover:border-blue-600 rounded-full w-10 h-10 flex justify-center items-center ml-2'>
+                            <svg className="w-6 h-6 text-gray-900 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </div>
