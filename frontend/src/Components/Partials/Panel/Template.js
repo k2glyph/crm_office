@@ -19,7 +19,7 @@ function Template() {
                     <div className="fixed inset-0 z-50 outline-none focus:outline-none">
                         <div className="relative h-screen w-2/6 border">
                             {/*content*/}
-                            <div className="border-0 px-5 shadow-lg relative flex flex-col w-full h-full bg-white outline-none focus:outline-none">
+                            <div className="border-0 overflow-y-auto px-5 shadow-lg relative flex flex-col w-full h-full bg-white outline-none focus:outline-none">
                                 {/*header*/}
                                 <div className="flex items-center justify-between py-5 border-b border-solid border-slate-200 rounded-t">
                                     <button className="p-1 bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onClick={() => setShowTemplate(false)}>
