@@ -21,7 +21,7 @@ function Template() {
                             {/*content*/}
                             <div className="border-0 px-5 shadow-lg relative flex flex-col w-full h-full bg-white outline-none focus:outline-none">
                                 {/*header*/}
-                                <div className="flex items-center justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                                <div className="flex items-center justify-between py-5 border-b border-solid border-slate-200 rounded-t">
                                     <button className="p-1 bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onClick={() => setShowTemplate(false)}>
                                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
                                     </button>
