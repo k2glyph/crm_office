@@ -4,7 +4,7 @@ import Profile from '../../../Assets/img/Profile.jpg';
 
 function CardWhatsapp({names, phone}) {
   return (
-    <div className='w-1/1 m-2 w-96 h-72 sm:w-72 flex justify-center items-center bg-white rounded-lg border-gray-200 shadow-md'>
+    <div className='w-1/1 m-2 w-96 h-72 sm:w-72 flex justify-center items-center bg-white rounded-2xl border-gray-200 shadow-md'>
         <div className='flex flex-col items-center'>
             <img className='mb-3 w-24 h-24 rounded-full shadow-lg' src={Profile} alt='Bonnie image'/>
             <h5 className='mb-1 text-xl font-medium text-gray-900'>{names}</h5>
